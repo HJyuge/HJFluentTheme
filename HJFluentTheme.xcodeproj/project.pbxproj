@@ -39,6 +39,7 @@
 		1B813D32246542DD004DE874 /* UISlider+ThemeModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D31246542DD004DE874 /* UISlider+ThemeModeKit.swift */; };
 		1B813D34246542ED004DE874 /* UITextField+ThemeModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D33246542ED004DE874 /* UITextField+ThemeModeKit.swift */; };
 		1B813D3624654301004DE874 /* UIApplication+ThemeModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D3524654301004DE874 /* UIApplication+ThemeModeKit.swift */; };
+		1B813D3E2465483E004DE874 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B813D3D2465483E004DE874 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,6 @@
 		1B813CA32463FF43004DE874 /* HJFluentThemeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HJFluentThemeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B813CA72463FF43004DE874 /* HJFluentThemeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJFluentThemeUITests.swift; sourceTree = "<group>"; };
 		1B813CA92463FF43004DE874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B813CFA24653FAD004DE874 /* HJFluentThemeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJFluentThemeKit.h; sourceTree = "<group>"; };
 		1B813CFC24653FD5004DE874 /* TMDynamicColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDynamicColor.h; sourceTree = "<group>"; };
 		1B813CFD24653FD5004DE874 /* TMDynamicColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMDynamicColor.m; sourceTree = "<group>"; };
 		1B813CFF24654019004DE874 /* TMDynamicImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDynamicImage.h; sourceTree = "<group>"; };
@@ -107,6 +107,9 @@
 		1B813D33246542ED004DE874 /* UITextField+ThemeModeKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ThemeModeKit.swift"; sourceTree = "<group>"; };
 		1B813D3524654301004DE874 /* UIApplication+ThemeModeKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ThemeModeKit.swift"; sourceTree = "<group>"; };
 		1B813D3824654500004DE874 /* HJFluentTheme-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HJFluentTheme-Bridging-Header.h"; sourceTree = "<group>"; };
+		1B813D3924654634004DE874 /* TMThemeModeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMThemeModeKit.h; sourceTree = "<group>"; };
+		1B813D3A246546B8004DE874 /* HJFluentTheme.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = HJFluentTheme.podspec; sourceTree = "<group>"; };
+		1B813D3D2465483E004DE874 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,7 @@
 		1B813C792463FF41004DE874 = {
 			isa = PBXGroup;
 			children = (
+				1B813D3A246546B8004DE874 /* HJFluentTheme.podspec */,
 				1B813CB524640102004DE874 /* Sources */,
 				1B813C842463FF41004DE874 /* HJFluentTheme */,
 				1B813C9B2463FF43004DE874 /* HJFluentThemeTests */,
@@ -165,6 +169,7 @@
 				1B813C902463FF43004DE874 /* LaunchScreen.storyboard */,
 				1B813C932463FF43004DE874 /* Info.plist */,
 				1B813D3824654500004DE874 /* HJFluentTheme-Bridging-Header.h */,
+				1B813D3D2465483E004DE874 /* Podfile */,
 			);
 			path = HJFluentTheme;
 			sourceTree = "<group>";
@@ -209,7 +214,7 @@
 		1B813CF924653F7F004DE874 /* ThemeModelCore */ = {
 			isa = PBXGroup;
 			children = (
-				1B813CFA24653FAD004DE874 /* HJFluentThemeKit.h */,
+				1B813D3924654634004DE874 /* TMThemeModeKit.h */,
 				1B813CFC24653FD5004DE874 /* TMDynamicColor.h */,
 				1B813CFD24653FD5004DE874 /* TMDynamicColor.m */,
 				1B813CFF24654019004DE874 /* TMDynamicImage.h */,
@@ -358,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B813D3E2465483E004DE874 /* Podfile in Resources */,
 				1B813C922463FF43004DE874 /* LaunchScreen.storyboard in Resources */,
 				1B813C8F2463FF43004DE874 /* Assets.xcassets in Resources */,
 				1B813C8D2463FF41004DE874 /* Main.storyboard in Resources */,
