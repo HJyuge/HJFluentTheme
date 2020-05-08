@@ -14,8 +14,8 @@
 #import "UIView+ThemeModeKit.h"
 #import "UIColor+ThemeModeKit.h"
 
-//! Project version number for DarkModeKit.
-FOUNDATION_EXPORT double DarkModeKitVersionNumber;
-
-//! Project version string for DarkModeKit.
-FOUNDATION_EXPORT const unsigned char DarkModeKitVersionString[];
+////! Project version number for DarkModeKit.
+//FOUNDATION_EXPORT double DarkModeKitVersionNumber;
+//
+////! Project version string for DarkModeKit.
+//FOUNDATION_EXPORT const unsigned char DarkModeKitVersionString[];

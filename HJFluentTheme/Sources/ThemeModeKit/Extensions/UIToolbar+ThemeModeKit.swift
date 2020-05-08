@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+extension UIToolbar {
+  override func tm_updateDynamicColors() {
+    super.tm_updateDynamicColors()
+
+    if let dynamicBarTintColor = barTintColor?.copy() as? DynamicColor {
+      barTintColor = dynamicBarTintColor
+    }
+  }
+}

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TMDynamicColor;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (ThemeModeKit)
++ (void)tm_swizzleSetBackgroundColor;
 
+@property (nonatomic, copy, nullable) TMDynamicColor *tm_dynamicBackgroundColor;
 @end
 
 NS_ASSUME_NONNULL_END

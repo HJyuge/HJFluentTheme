@@ -7,3 +7,17 @@
 //
 
 import Foundation
+extension UITextView {
+  override func tm_updateDynamicColors() {
+    super.tm_updateDynamicColors()
+    
+    keyboardAppearance = {
+      if TMTraitCollection.current.userInterfaceStyle == .dark {
+        return .dark
+      }
+      else {
+        return .default
+      }
+    }()
+  }
+}

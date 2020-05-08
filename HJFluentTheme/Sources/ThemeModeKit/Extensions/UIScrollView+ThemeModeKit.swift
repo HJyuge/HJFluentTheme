@@ -7,3 +7,17 @@
 //
 
 import Foundation
+extension UIScrollView {
+  override func tm_updateDynamicColors() {
+    super.tm_updateDynamicColors()
+
+    indicatorStyle = {
+      if TMTraitCollection.current.userInterfaceStyle == .dark {
+        return .white
+      }
+      else {
+        return .default
+      }
+    }()
+  }
+}

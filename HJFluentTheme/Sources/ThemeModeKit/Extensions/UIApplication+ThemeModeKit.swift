@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+
+extension UIApplication: TMTraitEnvironment {
+  open func tmTraitCollectionDidChange(_ previousTraitCollection: TMTraitCollection?) {
+    windows.forEach { $0.tmTraitCollectionDidChange(previousTraitCollection) }
+  }
+}

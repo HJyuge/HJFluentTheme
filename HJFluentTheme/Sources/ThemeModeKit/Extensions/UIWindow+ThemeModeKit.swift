@@ -7,3 +7,10 @@
 //
 
 import Foundation
+extension UIWindow {
+  open override func tmTraitCollectionDidChange(_ previousTraitCollection: TMTraitCollection?) {
+    super.tmTraitCollectionDidChange(previousTraitCollection)
+    rootViewController?.tmTraitCollectionDidChange(previousTraitCollection)
+  }
+}
+

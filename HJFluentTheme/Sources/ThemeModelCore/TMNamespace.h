@@ -6,8 +6,8 @@
 //  Copyright © 2020 SpeakNow. All rights reserved.
 //
 
-#ifndef TMNamespace_h
-#define TMNamespace_h
+#import <Foundation/Foundation.h>
 
-
-#endif /* TMNamespace_h */
+typedef NS_ENUM(NSInteger, TMNamespace) {
+  TMNamespaceTM NS_SWIFT_NAME(tm),
+};

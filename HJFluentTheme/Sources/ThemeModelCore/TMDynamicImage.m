@@ -8,6 +8,15 @@
 
 #import "TMDynamicImage.h"
 
-@implementation TMDynamicImage
+@import ObjectiveC;
+
+@interface TMDynamicImageProxy ()
+
+@property (nonatomic, strong) UIImage *lightImage;
+@property (nonatomic, strong) UIImage *darkImage;
+
+@end
+
+@implementation TMDynamicImageProxy
 
 @end

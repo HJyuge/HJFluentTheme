@@ -7,3 +7,15 @@
 //
 
 import Foundation
+extension UITableView {
+  override func tm_updateDynamicColors() {
+    super.tm_updateDynamicColors()
+    
+    if let dynamicSectionIndexColor = sectionIndexColor?.copy() as? DynamicColor {
+      sectionIndexColor = dynamicSectionIndexColor
+    }
+    if let dynamicSeparatorColor = separatorColor?.copy() as? DynamicColor {
+      separatorColor = dynamicSeparatorColor
+    }
+  }
+}

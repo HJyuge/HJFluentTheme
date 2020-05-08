@@ -7,7 +7,15 @@
 //
 
 #import "UIColor+ThemeModeKit.h"
+#import "TMDynamicColor.h"
 
 @implementation UIColor (ThemeModeKit)
++ (UIColor *)tm_colorWithPath:(NSString *)path {
+    return (UIColor *)[[TMDynamicColor alloc] initWithColorPath:path];
+}
 
++ (UIColor *)tm_namespace:(TMNamespace)namespace
+            colorWithPath:(NSString *)path {
+    return [UIColor tm_colorWithPath:path];
+}
 @end

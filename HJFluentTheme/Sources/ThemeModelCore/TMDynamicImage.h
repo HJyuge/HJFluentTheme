@@ -6,11 +6,15 @@
 //  Copyright © 2020 SpeakNow. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TMDynamicImage : NSProxy
+@interface TMDynamicImageProxy : NSProxy
+
+@property (nonatomic, readonly) UIImage *resolvedImage;
+
+- (instancetype)initWithLightImage:(UIImage *)lightImage darkImage:(UIImage *)darkImage;
 
 @end
 
