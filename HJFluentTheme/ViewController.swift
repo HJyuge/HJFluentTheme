@@ -7,25 +7,33 @@
 //
 
 import UIKit
+let configuration = ThemeConfiguration()
 
 class ViewController: UIViewController {
+    
+    
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = UIColor(.tm, path: kVCBgMainColor)
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      barButtonSystemItem: .refresh,
+      target: self,
+      action: #selector(refresh)
+    )
+  }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //自顶向下
-        
-        //调用
-        // color 从配置文件中读取对应的颜色
-//        let color = UIColor(withPath:kThemeBackgroundColor)
-        // kThemeBackgroundColor 为string
-        
-        // color 动态变更，根据主题进行动态切换
-        
-        
-        //
-        
+  @objc
+  private func refresh() {
+    if TMTraitCollection.current.userInterfaceStyle == .dark {
+        configuration.themeMode = "light"
+        TMTraitCollection.current = TMTraitCollection(userInterfaceStyle: .light, themeConfiguration: configuration)
     }
-
-
+    else {
+        configuration.themeMode = "dark"
+        TMTraitCollection.current = TMTraitCollection(userInterfaceStyle: .dark, themeConfiguration: configuration)
+    }
+    ThemeModeManager.updateAppearance(for: .shared, animated: true)
+  }
 }
 

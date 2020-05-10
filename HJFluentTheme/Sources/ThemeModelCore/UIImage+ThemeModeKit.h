@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (ThemeModeKit)
++ (UIImage *)tm_imageWitPath:(NSString *)path NS_SWIFT_UNAVAILABLE("Use init(_:path:) instead.");
 
+#if __swift__
++ (UIImage *)tm_namespace:(TMNamespace)namespace
+      imageWithPath:(NSString *)path NS_SWIFT_NAME(init(_:path:));
+#endif
 @end
 
 NS_ASSUME_NONNULL_END

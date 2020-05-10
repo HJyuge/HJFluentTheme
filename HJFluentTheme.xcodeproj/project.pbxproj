@@ -40,6 +40,17 @@
 		1B813D3624654301004DE874 /* UIApplication+ThemeModeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D3524654301004DE874 /* UIApplication+ThemeModeKit.swift */; };
 		1B813D3E2465483E004DE874 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B813D3D2465483E004DE874 /* Podfile */; };
 		1B813D412465557C004DE874 /* NSObject+ThemeModeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D402465557C004DE874 /* NSObject+ThemeModeKit.m */; };
+		1B813D4324657010004DE874 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D4224657010004DE874 /* NavigationController.swift */; };
+		1B813D4524657021004DE874 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D4424657021004DE874 /* MainViewController.swift */; };
+		1B813D472465709B004DE874 /* UIViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D462465709B004DE874 /* UIViewVC.swift */; };
+		1B813D49246570AE004DE874 /* UIActivityIndicatorViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D48246570AE004DE874 /* UIActivityIndicatorViewVC.swift */; };
+		1B813D4B246570BC004DE874 /* UIButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D4A246570BC004DE874 /* UIButtonVC.swift */; };
+		1B813D4D246570D0004DE874 /* UIPageControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D4C246570D0004DE874 /* UIPageControlVC.swift */; };
+		1B813D512465763B004DE874 /* Dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B813D4E2465763B004DE874 /* Dark.json */; };
+		1B813D522465763B004DE874 /* Light.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B813D4F2465763B004DE874 /* Light.json */; };
+		1B813D532465763B004DE874 /* Theme-Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B813D502465763B004DE874 /* Theme-Colors.json */; };
+		1B813D5524657690004DE874 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D5424657690004DE874 /* UIColorExtension.swift */; };
+		1B813D57246578A6004DE874 /* ThemeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B813D56246578A6004DE874 /* ThemeConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +121,17 @@
 		1B813D3D2465483E004DE874 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		1B813D3F2465557C004DE874 /* NSObject+ThemeModeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ThemeModeKit.h"; sourceTree = "<group>"; };
 		1B813D402465557C004DE874 /* NSObject+ThemeModeKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ThemeModeKit.m"; sourceTree = "<group>"; };
+		1B813D4224657010004DE874 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		1B813D4424657021004DE874 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1B813D462465709B004DE874 /* UIViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewVC.swift; sourceTree = "<group>"; };
+		1B813D48246570AE004DE874 /* UIActivityIndicatorViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewVC.swift; sourceTree = "<group>"; };
+		1B813D4A246570BC004DE874 /* UIButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonVC.swift; sourceTree = "<group>"; };
+		1B813D4C246570D0004DE874 /* UIPageControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControlVC.swift; sourceTree = "<group>"; };
+		1B813D4E2465763B004DE874 /* Dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Dark.json; sourceTree = "<group>"; };
+		1B813D4F2465763B004DE874 /* Light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Light.json; sourceTree = "<group>"; };
+		1B813D502465763B004DE874 /* Theme-Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Theme-Colors.json"; sourceTree = "<group>"; };
+		1B813D5424657690004DE874 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1B813D56246578A6004DE874 /* ThemeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,13 +185,23 @@
 			isa = PBXGroup;
 			children = (
 				1B813C852463FF41004DE874 /* AppDelegate.swift */,
+				1B813D4224657010004DE874 /* NavigationController.swift */,
+				1B813D4424657021004DE874 /* MainViewController.swift */,
 				1B813C892463FF41004DE874 /* ViewController.swift */,
+				1B813D462465709B004DE874 /* UIViewVC.swift */,
+				1B813D48246570AE004DE874 /* UIActivityIndicatorViewVC.swift */,
+				1B813D4A246570BC004DE874 /* UIButtonVC.swift */,
+				1B813D4C246570D0004DE874 /* UIPageControlVC.swift */,
+				1B813D56246578A6004DE874 /* ThemeConfiguration.swift */,
 				1B813C8B2463FF41004DE874 /* Main.storyboard */,
 				1B813C8E2463FF43004DE874 /* Assets.xcassets */,
 				1B813C902463FF43004DE874 /* LaunchScreen.storyboard */,
 				1B813C932463FF43004DE874 /* Info.plist */,
 				1B813D3824654500004DE874 /* HJFluentTheme-Bridging-Header.h */,
 				1B813D3D2465483E004DE874 /* Podfile */,
+				1B813D4E2465763B004DE874 /* Dark.json */,
+				1B813D4F2465763B004DE874 /* Light.json */,
+				1B813D502465763B004DE874 /* Theme-Colors.json */,
 			);
 			path = HJFluentTheme;
 			sourceTree = "<group>";
@@ -237,6 +269,7 @@
 		1B813D12246541A3004DE874 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1B813D5424657690004DE874 /* UIColorExtension.swift */,
 				1B813D152465421F004DE874 /* UIView+ThemeModeKit.swift */,
 				1B813D172465422F004DE874 /* UIToolbar+ThemeModeKit.swift */,
 				1B813D1924654238004DE874 /* UIButton+ThemeModeKit.swift */,
@@ -363,7 +396,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B813D532465763B004DE874 /* Theme-Colors.json in Resources */,
+				1B813D512465763B004DE874 /* Dark.json in Resources */,
 				1B813D3E2465483E004DE874 /* Podfile in Resources */,
+				1B813D522465763B004DE874 /* Light.json in Resources */,
 				1B813C922463FF43004DE874 /* LaunchScreen.storyboard in Resources */,
 				1B813C8F2463FF43004DE874 /* Assets.xcassets in Resources */,
 				1B813C8D2463FF41004DE874 /* Main.storyboard in Resources */,
@@ -394,22 +430,30 @@
 				1B813CFE24653FD5004DE874 /* TMDynamicColor.m in Sources */,
 				1B813D1A24654238004DE874 /* UIButton+ThemeModeKit.swift in Sources */,
 				1B813D0B24654163004DE874 /* UIColor+ThemeModeKit.m in Sources */,
+				1B813D4B246570BC004DE874 /* UIButtonVC.swift in Sources */,
 				1B813C8A2463FF41004DE874 /* ViewController.swift in Sources */,
 				1B813D282465429B004DE874 /* UITableView+ThemeModeKit.swift in Sources */,
+				1B813D4324657010004DE874 /* NavigationController.swift in Sources */,
 				1B813D222465426C004DE874 /* UITextView+ThemeModeKit.swift in Sources */,
 				1B813D0124654019004DE874 /* TMDynamicImage.m in Sources */,
 				1B813C862463FF41004DE874 /* AppDelegate.swift in Sources */,
+				1B813D49246570AE004DE874 /* UIActivityIndicatorViewVC.swift in Sources */,
+				1B813D472465709B004DE874 /* UIViewVC.swift in Sources */,
 				1B813D242465427A004DE874 /* UIImageView+ThemeModeKit.swift in Sources */,
 				1B813D30246542CD004DE874 /* UILabel+ThemeModeKit.swift in Sources */,
 				1B813D2A246542A7004DE874 /* UINavigationBar+ThemeModeKit.swift in Sources */,
 				1B813D34246542ED004DE874 /* UITextField+ThemeModeKit.swift in Sources */,
 				1B813D1C24654245004DE874 /* UIWindow+ThemeModeKit.swift in Sources */,
+				1B813D5524657690004DE874 /* UIColorExtension.swift in Sources */,
 				1B813D182465422F004DE874 /* UIToolbar+ThemeModeKit.swift in Sources */,
+				1B813D4524657021004DE874 /* MainViewController.swift in Sources */,
 				1B813D3624654301004DE874 /* UIApplication+ThemeModeKit.swift in Sources */,
 				1B813D2E246542C3004DE874 /* UIViewController+ThemeModeKit.swift in Sources */,
 				1B813D32246542DD004DE874 /* UISlider+ThemeModeKit.swift in Sources */,
+				1B813D4D246570D0004DE874 /* UIPageControlVC.swift in Sources */,
 				1B813D14246541D5004DE874 /* ThemeModeManager.swift in Sources */,
 				1B813D162465421F004DE874 /* UIView+ThemeModeKit.swift in Sources */,
+				1B813D57246578A6004DE874 /* ThemeConfiguration.swift in Sources */,
 				1B813D0E24654173004DE874 /* UIView+ThemeModeKit.m in Sources */,
 				1B813D412465557C004DE874 /* NSObject+ThemeModeKit.m in Sources */,
 				1B813D262465428E004DE874 /* UIPageControl+ThemeModeKit.swift in Sources */,
@@ -601,7 +645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.speaknow.HJFluentTheme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/huangjin/Developer/HuangJin/HJFluentTheme/HJFluentTheme/HJFluentTheme-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "HJFluentTheme/HJFluentTheme-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -623,7 +667,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.speaknow.HJFluentTheme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/huangjin/Developer/HuangJin/HJFluentTheme/HJFluentTheme/HJFluentTheme-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "HJFluentTheme/HJFluentTheme-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -19,10 +19,11 @@ static TMTraitCollection *_currentTraitCollection = nil;
   _currentTraitCollection = currentTraitCollection;
 }
 
-+ (TMTraitCollection *)traitCollectionWithUserInterfaceStyle:(TMUserInterfaceStyle)userInterfaceStyle {
-  TMTraitCollection *traitCollection = [[TMTraitCollection alloc] init];
-  traitCollection->_userInterfaceStyle = userInterfaceStyle;
-  return traitCollection;
++ (TMTraitCollection *)traitCollectionWithUserInterfaceStyle:(TMUserInterfaceStyle)userInterfaceStyle themeConfiguration:(id<TMThemeConfiguration>)themeConfiguration;{
+    TMTraitCollection *traitCollection = [[TMTraitCollection alloc] init];
+    traitCollection->_userInterfaceStyle = userInterfaceStyle;
+    traitCollection->_themeConfiguration = themeConfiguration;
+    return traitCollection;
 }
 
 - (instancetype)init {
@@ -33,3 +34,4 @@ static TMTraitCollection *_currentTraitCollection = nil;
   return self;
 }
 @end
+

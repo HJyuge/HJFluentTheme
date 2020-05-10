@@ -7,29 +7,55 @@
 //
 
 #import "TMDynamicColor.h"
+#import "TMTraitCollection.h"
+#import "UIColor+ThemeModeKit.h"
 
 @interface TMDynamicColorProxy : NSProxy <NSCopying>
 
-@property (nonatomic, readonly) UIColor *resolvedColor;
+@property (nonatomic, strong) UIColor *resolvedColor;
 @property (nonatomic, strong) UIColor *currentColor;
 @property (nonatomic, strong) NSString *path;
-
+@property (nonatomic, strong) NSString *themeMode;
+@property (nonatomic, assign) CGFloat alpha;
 @end
 
 @implementation TMDynamicColorProxy
 
 - (instancetype)initWithColorPath:(NSString *)path {
-    self.currentColor = [UIColor colorNamed:path];
+    NSString *basePath = [NSString stringWithFormat:@"%@.%@",TMTraitCollection.currentTraitCollection.themeConfiguration.themeMode,path];
+    NSString *colorStr = [TMTraitCollection.currentTraitCollection.themeConfiguration resolveSpecificColorPath:basePath];
+    self.path = path;
+    self.currentColor = [UIColor tm_colorWithHexString:colorStr];
     return self;
 }
 
 - (UIColor *)resolvedColor {
-//  if (DMTraitCollection.currentTraitCollection.userInterfaceStyle == DMUserInterfaceStyleDark) {
-//    return self.darkColor;
-//  } else {
-//    return self.lightColor;
-//  }
+    if([_themeMode isEqualToString:TMTraitCollection.currentTraitCollection.themeConfiguration.themeMode] && self.currentColor){
+        return self.currentColor;
+    }
+    NSString *basePath = [NSString stringWithFormat:@"%@.%@",TMTraitCollection.currentTraitCollection.themeConfiguration.themeMode,self.path];
+    NSString *colorStr = [TMTraitCollection.currentTraitCollection.themeConfiguration resolveSpecificColorPath:basePath];
+    UIColor *modeColor = [UIColor tm_colorWithHexString:colorStr];
+    if (modeColor == nil) {
+        return self.currentColor;
+    }
+    self.themeMode = TMTraitCollection.currentTraitCollection.themeConfiguration.themeMode;
+    if (self.alpha) {
+        modeColor = [modeColor colorWithAlphaComponent:self.alpha];
+    }
+    self.currentColor = modeColor;
     return self.currentColor;
+}
+
+// MARK: UIColor
+- (void)changeColorWithAlphaComponent:(CGFloat)alpha{
+    self.alpha = alpha;
+    self.currentColor = [self.currentColor colorWithAlphaComponent:alpha];
+}
+- (UIColor *)colorWithAlphaComponent:(CGFloat)alpha {
+    TMDynamicColorProxy *proxy = (TMDynamicColorProxy *)[[TMDynamicColor alloc] initWithColorPath:self.path];
+    [proxy changeColorWithAlphaComponent:alpha];
+    return (TMDynamicColor *)proxy;
 }
 
 // MARK: NSProxy

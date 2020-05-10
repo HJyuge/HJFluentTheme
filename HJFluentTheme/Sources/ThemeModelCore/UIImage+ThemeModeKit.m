@@ -16,14 +16,13 @@
   [UIImage tm_swizzleInstanceMethod:@selector(isEqual:) to:@selector(tm_isEqual:)];
 }
 
-+ (UIImage *)tm_imageWithLightImage:(UIImage *)lightImage darkImage:(UIImage *)darkImage {
-    return (UIImage *)[[TMDynamicImageProxy alloc] initWithLightImage:lightImage darkImage:darkImage];
++ (UIImage *)tm_imageWitPath:(NSString *)path {
+    return (UIImage *)[[TMDynamicImageProxy alloc] initWithImagePath:path];
 }
 
 + (UIImage *)tm_namespace:(TMNamespace)namespace
-      imageWithLightImage:(UIImage *)lightImage
-                darkImage:(UIImage *)darkImage {
-  return [UIImage tm_imageWithLightImage:lightImage darkImage:darkImage];
+            imageWithPath:(NSString *)path {
+  return [UIImage tm_imageWitPath:path];
 }
 
 - (BOOL)tm_isEqual:(UIImage *)other {

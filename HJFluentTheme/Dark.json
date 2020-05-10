@@ -1,0 +1,60 @@
+{
+  "ECLSessionListViewController": {
+    "WorkItemCell-bg-cell": "#1F2226"
+  },
+  "ECLSpanButton": {
+    "ec-span-bg-color": "#FFFFFF",
+    "ec-span-title-color": "#434649"
+  },
+  "Theme_Global": {
+    "line-color": "#2F3336",
+    "nav-bg-color": "#13171B",
+    "tab-bg-color": "#1F2226",
+    "text-des-color": "#FFFFFF57",
+    "text-dis-color": "#FFFFFF63",
+    "text-highlight-color": "#FFFFFF8A",
+    "text-main-color": "#FFFFFFDE",
+    "text-weak-color": "#FFFFFF45",
+    "vc-bg-main-color": "#13171B",
+    "vc-list-cell-bg-color": "#1F2226"
+  },
+  "Theme_GlobalBrandColor": {
+    "ec-alert-color": "#E67C05",
+    "ec-assist-color": "#2F7BE0",
+    "ec-brand-color": "#18B557",
+    "ec-error-color": "#E65550",
+    "ec-extension-color-01": "#14B54A",
+    "ec-extension-color-02": "#E69112",
+    "ec-extension-color-03": "#4588E6",
+    "ec-extension-color-04": "#E67463",
+    "ec-link-color": "#7D8CA9"
+  },
+  "Theme_GlobalImage": {
+    "navBar_crm_add_icon": "dark_navBar_crm_add_l",
+    "navBar_crm_filter_icon": "dark_navBar_crm_filter_l",
+    "navBar_crm_sel_icon": "dark_navBar_crm_sel_l",
+    "session-nav-icon-corp": "navBar-corplist-dark",
+    "session-nav-icon-scan": "navBar-scan-dark",
+    "work_item_discuss_home": "dark_work_item_discuss_home",
+    "work_item_guide_home": "dark_work_item_guide_home",
+    "work_item_order_home": "dark_work_item_order_home",
+    "work_item_remind_home": "dark_work_item_remind_home",
+    "work_item_visit_home": "dark_work_item_visit_home",
+    "navBar_image_nav_back":"dark_image_nav_back"
+  },
+  "Theme_Image_TabBar": {
+    "tabbar_crm_normal": "dark_tabbar_crm_normal",
+    "tabbar_crm_selected": "dark_tabbar_crm_selected",
+    "tabbar_me_normal": "dark_tabbar_me_normal",
+    "tabbar_me_selected": "dark_tabbar_me_selected",
+    "tabbar_session_normal": "dark_tabbar_session_normal",
+    "tabbar_session_selected": "dark_tabbar_session_selected",
+    "tabbar_tool_normal": "dark_tabbar_tool_normal",
+    "tabbar_tool_selected": "dark_tabbar_tool_selected"
+  },
+  "Theme_SearchBar": {
+    "search-text-view-bg-color": "#1F2226"
+  },
+  "UIStatusBarStyle": "LightContent",
+  "type": "Dark"
+}

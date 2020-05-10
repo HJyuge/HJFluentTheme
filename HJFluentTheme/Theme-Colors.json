@@ -1,0 +1,121 @@
+{
+  "Light": {
+    "ECLSessionListViewController": {
+      "WorkItemCell-bg-cell": "#FFFFFF"
+    },
+    "ECLSpanButton": {
+      "ec-span-bg-color": "#434649",
+      "ec-span-title-color": "#FFFFFF"
+    },
+    "Theme_Global": {
+      "line-color": "#DBE0E5",
+      "nav-bg-color": "#F2F5F7",
+      "tab-bg-color": "#F2F5F7",
+      "text-des-color": "#00000045",
+      "text-dis-color": "#00000003",
+      "text-highlight-color": "#000000FC",
+      "text-main-color": "#000000FF",
+      "text-weak-color": "#000000F4",
+      "vc-bg-main-color": "#F2F5F7",
+      "vc-list-cell-bg-color": "#FFFFFF"
+    },
+    "Theme_GlobalBrandColor": {
+      "ec-alert-color": "#FF8A05",
+      "ec-assist-color": "#2F85F9",
+      "ec-brand-color": "#00C347",
+      "ec-error-color": "#FF534E",
+      "ec-extension-color-01": "#13CE52",
+      "ec-extension-color-02": "#FFA013",
+      "ec-extension-color-03": "#4794FF",
+      "ec-extension-color-04": "#FF6A54",
+      "ec-link-color": "#67758F"
+    },
+    "Theme_GlobalImage": {
+      "session-nav-icon-corp": "navBar_corplist",
+      "session-nav-icon-scan": "navBar_scan",
+      "work_item_discuss_home": "work_item_discuss_home",
+      "work_item_guide_home": "work_item_guide_home",
+      "work_item_order_home": "work_item_order_home",
+      "work_item_remind_home": "work_item_remind_home",
+      "work_item_visit_home": "work_item_visit_home",
+      "navBar_crm_add_icon":"navBar_crm_add_l",
+      "navBar_crm_sel_icon":"navBar_crm_sel_l",
+      "navBar_crm_filter_icon":"navBar_crm_filter_l"
+    },
+    "Theme_Image_TabBar": {
+      "tabbar_crm_normal": "tabbar_crm_normal",
+      "tabbar_crm_selected": "tabbar_crm_selected",
+      "tabbar_me_normal": "tabbar_me_normal",
+      "tabbar_me_selected": "tabbar_me_selected",
+      "tabbar_session_normal": "tabbar_session_normal",
+      "tabbar_session_selected": "tabbar_session_selected",
+      "tabbar_tool_normal": "tabbar_tool_normal",
+      "tabbar_tool_selected": "tabbar_tool_selected"
+    },
+    "Theme_SearchBar": {
+      "search-text-view-bg-color": "#FFFFFF"
+    },
+    "UIStatusBarStyle": "DarkContent",
+    "type": "Light"
+  },
+  
+  "Dark": {
+    "ECLSessionListViewController": {
+      "WorkItemCell-bg-cell": "#1F2226"
+    },
+    "ECLSpanButton": {
+      "ec-span-bg-color": "#FFFFFF",
+      "ec-span-title-color": "#434649"
+    },
+    "Theme_Global": {
+      "line-color": "#2F3336",
+      "nav-bg-color": "#13171B",
+      "tab-bg-color": "#1F2226",
+      "text-des-color": "#FFFFFF57",
+      "text-dis-color": "#FFFFFF63",
+      "text-highlight-color": "#FFFFFF8A",
+      "text-main-color": "#FFFFFFDE",
+      "text-weak-color": "#FFFFFF45",
+      "vc-bg-main-color": "#13171B",
+      "vc-list-cell-bg-color": "#1F2226"
+    },
+    "Theme_GlobalBrandColor": {
+      "ec-alert-color": "#E67C05",
+      "ec-assist-color": "#2F7BE0",
+      "ec-brand-color": "#18B557",
+      "ec-error-color": "#E65550",
+      "ec-extension-color-01": "#14B54A",
+      "ec-extension-color-02": "#E69112",
+      "ec-extension-color-03": "#4588E6",
+      "ec-extension-color-04": "#E67463",
+      "ec-link-color": "#7D8CA9"
+    },
+    "Theme_GlobalImage": {
+      "session-nav-icon-corp": "navBar-corplist-dark",
+      "session-nav-icon-scan": "navBar-scan-dark",
+      "work_item_discuss_home": "dark_work_item_discuss_home",
+      "work_item_guide_home": "dark_work_item_guide_home",
+      "work_item_order_home": "dark_work_item_order_home",
+      "work_item_remind_home": "dark_work_item_remind_home",
+      "work_item_visit_home": "dark_work_item_visit_home",
+      "navBar_crm_add_icon":"dark_navBar_crm_add_l",
+      "navBar_crm_sel_icon":"dark_navBar_crm_sel_l",
+      "navBar_crm_filter_icon":"dark_navBar_crm_filter_l"
+    },
+    "Theme_Image_TabBar": {
+      "tabbar_crm_normal": "dark_tabbar_crm_normal",
+      "tabbar_crm_selected": "dark_tabbar_crm_selected",
+      "tabbar_me_normal": "dark_tabbar_me_normal",
+      "tabbar_me_selected": "dark_tabbar_me_selected",
+      "tabbar_session_normal": "dark_tabbar_session_normal",
+      "tabbar_session_selected": "dark_tabbar_session_selected",
+      "tabbar_tool_normal": "dark_tabbar_tool_normal",
+      "tabbar_tool_selected": "dark_tabbar_tool_selected"
+    },
+    "Theme_SearchBar": {
+      "search-text-view-bg-color": "#1F2226"
+    },
+    "UIStatusBarStyle": "LightContent",
+    "type": "Dark"
+  }
+}

@@ -10,11 +10,23 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        ThemeModeManager.setup()
+        TMTraitCollection.current = TMTraitCollection(userInterfaceStyle: .light, themeConfiguration: configuration)
+        
+        window = UIWindow()
+        window?.rootViewController = {
+          let tabBarController = UITabBarController()
+          tabBarController.viewControllers = [
+            NavigationController(rootViewController: MainViewController()),
+            NavigationController(rootViewController: ViewController()),
+          ]
+          return tabBarController
+        }()
+        window?.makeKeyAndVisible()
         return true
     }
 

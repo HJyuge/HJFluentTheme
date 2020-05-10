@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) UIImage *resolvedImage;
 
-- (instancetype)initWithLightImage:(UIImage *)lightImage darkImage:(UIImage *)darkImage;
+- (instancetype)initWithImagePath:(NSString *)path;
 
 @end
 

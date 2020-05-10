@@ -13,13 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (ThemeModeKit)
 
-+ (UIColor *)tm_colorWithPath:(NSString *)path NS_SWIFT_UNAVAILABLE("Use init(_:path) instead.");
++ (UIColor *)tm_colorWithPath:(NSString *)path NS_SWIFT_UNAVAILABLE("Use init(_:path:) instead.");
 
 #if __swift__
 + (UIColor *)tm_namespace:(TMNamespace)namespace
       colorWithPath:(NSString *)path NS_SWIFT_NAME(init(_:path:));
 #endif
-
++ (UIColor *)tm_colorWithHexString:(NSString *)string;
 @end
 
 NS_ASSUME_NONNULL_END
