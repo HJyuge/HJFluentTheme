@@ -49,4 +49,15 @@ typedef NS_ENUM(NSInteger, TMUserInterfaceStyle) {
 
 @end
 
+
+@interface TMDynamicMethod : NSObject
+@property (nonatomic, readonly) NSArray *parameters;
+@property (nonatomic, readonly) NSString *selector;
+
++ (instancetype)dynamicMethodWithSelector:(NSString *)selector Parameters:(NSArray *)parameters;
+- (void)setSelector:(NSString *)selector Parameters:(NSArray *)parameters;
+
+@end
+
+
 NS_ASSUME_NONNULL_END

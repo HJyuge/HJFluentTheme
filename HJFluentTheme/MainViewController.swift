@@ -54,8 +54,10 @@ extension MainViewController: UITableViewDataSource {
     if row.name == "discuss"{
         cell.imageView?.image = UIImage(.tm, path: kWorkItemDiscussHomeImage)
     }else if row.name == "guide"{
-        cell.imageView?.image = UIImage(.tm, path: kWorkItemGuideHomeImage)
+        let value: CGFloat = 5
+        cell.imageView?.image = UIImage(.tm, path: kWorkItemGuideHomeImage).resizableImage(withCapInsets: UIEdgeInsets(top: value, left: value, bottom: value, right: value))
     }
+    //UIImage(.tm, path: kWorkItemDiscussHomeImage).resizableImage(withCapInsets: UIEdgeInsets(top: value, left: value, bottom: value, right: value))
     return cell
   }
 }

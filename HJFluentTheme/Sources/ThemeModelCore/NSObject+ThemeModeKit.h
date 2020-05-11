@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// Return NO if any selector cannot find corresponding method.
 + (BOOL)tm_swizzleInstanceMethod:(SEL)fromSelector to:(SEL)toSelector;
+
+- (id)performSelector:(SEL)aSelector withObjects:(NSArray *)objects;
 @end
 
 NS_ASSUME_NONNULL_END

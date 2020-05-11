@@ -35,3 +35,20 @@ static TMTraitCollection *_currentTraitCollection = nil;
 }
 @end
 
+@interface TMDynamicMethod ()
+@property (nonatomic, strong) NSArray *parameters;
+@property (nonatomic, copy) NSString *selector;
+@end
+
+@implementation TMDynamicMethod
++ (instancetype)dynamicMethodWithSelector:(NSString *)selector Parameters:(NSArray *)parameters {
+    TMDynamicMethod *method = [[TMDynamicMethod alloc] init];
+    [method setSelector:selector Parameters:parameters];
+    return method;
+}
+
+- (void)setSelector:(NSString *)selector Parameters:(NSArray *)parameters {
+    self.parameters = parameters;
+    self.selector = selector;
+}
+@end

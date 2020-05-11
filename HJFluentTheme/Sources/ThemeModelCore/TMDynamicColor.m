@@ -9,6 +9,7 @@
 #import "TMDynamicColor.h"
 #import "TMTraitCollection.h"
 #import "UIColor+ThemeModeKit.h"
+#import "NSObject+ThemeModeKit.h"
 
 @interface TMDynamicColorProxy : NSProxy <NSCopying>
 
@@ -16,7 +17,7 @@
 @property (nonatomic, strong) UIColor *currentColor;
 @property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) NSString *themeMode;
-@property (nonatomic, assign) CGFloat alpha;
+@property (nonatomic, strong) TMDynamicMethod *method;
 @end
 
 @implementation TMDynamicColorProxy
@@ -40,21 +41,19 @@
         return self.currentColor;
     }
     self.themeMode = TMTraitCollection.currentTraitCollection.themeConfiguration.themeMode;
-    if (self.alpha) {
-        modeColor = [modeColor colorWithAlphaComponent:self.alpha];
+    if (self.method) {
+        modeColor = [modeColor performSelector:NSSelectorFromString(_method.selector) withObjects:_method.parameters];
     }
     self.currentColor = modeColor;
     return self.currentColor;
 }
 
 // MARK: UIColor
-- (void)changeColorWithAlphaComponent:(CGFloat)alpha{
-    self.alpha = alpha;
-    self.currentColor = [self.currentColor colorWithAlphaComponent:alpha];
-}
 - (UIColor *)colorWithAlphaComponent:(CGFloat)alpha {
     TMDynamicColorProxy *proxy = (TMDynamicColorProxy *)[[TMDynamicColor alloc] initWithColorPath:self.path];
-    [proxy changeColorWithAlphaComponent:alpha];
+    proxy.currentColor = [proxy.currentColor colorWithAlphaComponent:alpha];
+    NSNumber *alphaNumber = [NSNumber numberWithFloat:alpha];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(colorWithAlphaComponent:)) Parameters:@[alphaNumber]];
     return (TMDynamicColor *)proxy;
 }
 

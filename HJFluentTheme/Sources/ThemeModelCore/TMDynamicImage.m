@@ -8,6 +8,7 @@
 
 #import "TMDynamicImage.h"
 #import "TMTraitCollection.h"
+#import "NSObject+ThemeModeKit.h"
 @import ObjectiveC;
 
 @interface TMDynamicImageProxy ()
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) NSString *path;
 @property (nonatomic, strong) UIImage *currentImage;
 @property (nonatomic, strong) NSString *themeMode;
+@property (nonatomic, strong) TMDynamicMethod *method;
 @end
 
 @implementation TMDynamicImageProxy
@@ -40,6 +42,9 @@
         return self.currentImage;
     }
     self.themeMode = TMTraitCollection.currentTraitCollection.themeConfiguration.themeMode;
+    if (_method){
+        modeImage = [modeImage performSelector:NSSelectorFromString(_method.selector) withObjects:_method.parameters];
+    }
     self.currentImage = modeImage;
     return self.currentImage;
 }
@@ -59,31 +64,44 @@
 
 - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets {
     TMDynamicImageProxy *proxy = [[TMDynamicImageProxy alloc] initWithImagePath:self.path];
-    [proxy.currentImage resizableImageWithCapInsets:capInsets];
+    proxy.currentImage = [proxy.currentImage resizableImageWithCapInsets:capInsets];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(resizableImageWithCapInsets:)) Parameters:@[NSStringFromUIEdgeInsets(capInsets)]];
     return (UIImage *)proxy;
 }
 
 - (UIImage *)resizableImageWithCapInsets:(UIEdgeInsets)capInsets resizingMode:(UIImageResizingMode)resizingMode {
-    return [(UIImage *)[[TMDynamicImageProxy alloc] initWithImagePath:self.path] resizableImageWithCapInsets:capInsets resizingMode:resizingMode];;
+    TMDynamicImageProxy *proxy = [[TMDynamicImageProxy alloc] initWithImagePath:self.path];
+    proxy.currentImage = [proxy.currentImage resizableImageWithCapInsets:capInsets resizingMode:resizingMode];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(resizableImageWithCapInsets: resizingMode:)) Parameters:@[NSStringFromUIEdgeInsets(capInsets),@(resizingMode)]];
+    return (UIImage *)proxy;
 }
 
 - (UIImage *)imageWithAlignmentRectInsets:(UIEdgeInsets)alignmentInsets {
-    UIImage *image = (UIImage *)[[TMDynamicImageProxy alloc] initWithImagePath:self.path];
-    return [image imageWithAlignmentRectInsets:alignmentInsets];
+    TMDynamicImageProxy *proxy = [[TMDynamicImageProxy alloc] initWithImagePath:self.path];
+    proxy.currentImage = [proxy.currentImage imageWithAlignmentRectInsets:alignmentInsets];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(imageWithAlignmentRectInsets:)) Parameters:@[NSStringFromUIEdgeInsets(alignmentInsets)]];
+    return (UIImage *)proxy;
 }
 
 - (UIImage *)imageWithRenderingMode:(UIImageRenderingMode)renderingMode {
-    
-    return [(UIImage *)[[TMDynamicImageProxy alloc] initWithImagePath:self.path] imageWithRenderingMode:renderingMode];
+    TMDynamicImageProxy *proxy = [[TMDynamicImageProxy alloc] initWithImagePath:self.path];
+    proxy.currentImage = [proxy.currentImage imageWithRenderingMode:renderingMode];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(imageWithRenderingMode:)) Parameters:@[@(renderingMode)]];
+    return (UIImage *)proxy;
 }
 
 - (UIImage *)imageFlippedForRightToLeftLayoutDirection {
-    
-    return [(UIImage *)[[TMDynamicImageProxy alloc] initWithImagePath:self.path] imageFlippedForRightToLeftLayoutDirection];
+    TMDynamicImageProxy *proxy = [[TMDynamicImageProxy alloc] initWithImagePath:self.path];
+    proxy.currentImage = [proxy.currentImage imageFlippedForRightToLeftLayoutDirection];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(imageFlippedForRightToLeftLayoutDirection)) Parameters:@[]];
+    return (UIImage *)proxy;
 }
 
 - (UIImage *)imageWithHorizontallyFlippedOrientation {
-    return [(UIImage *)[[TMDynamicImageProxy alloc] initWithImagePath:self.path] imageWithHorizontallyFlippedOrientation];
+    TMDynamicImageProxy *proxy = [[TMDynamicImageProxy alloc] initWithImagePath:self.path];
+    proxy.currentImage = [proxy.currentImage imageWithHorizontallyFlippedOrientation];
+    proxy.method = [TMDynamicMethod dynamicMethodWithSelector:NSStringFromSelector(@selector(imageWithHorizontallyFlippedOrientation)) Parameters:@[]];
+    return (UIImage *)proxy;
 }
 
 - (id)copy {
